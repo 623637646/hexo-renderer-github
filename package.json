@@ -1,0 +1,35 @@
+{
+  "name": "hexo-renderer-github-repos",
+  "version": "1.0.0",
+  "description": "Hexo renderer for .github files.",
+  "main": "out/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/623637646/hexo-renderer-github.git"
+  },
+  "keywords": [
+    "Hexo",
+    "renderer",
+    "github"
+  ],
+  "author": "wy19900729@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/623637646/hexo-renderer-github/issues"
+  },
+  "homepage": "https://github.com/623637646/hexo-renderer-github#readme",
+  "dependencies": {
+    "crawler": "^1.2.2",
+    "keyv": "^4.0.3",
+    "keyv-file": "^0.2.0"
+  },
+  "devDependencies": {
+    "@types/crawler": "^1.2.0",
+    "@types/hexo": "^3.8.5",
+    "@types/keyv": "^3.1.1",
+    "hexo": "^5.2.0"
+  }
+}
