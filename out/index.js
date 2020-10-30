@@ -212,7 +212,7 @@ hexo.extend.renderer.register('github', 'html', function (data, options) {
                     return [4 /*yield*/, htmlPromise];
                 case 2:
                     html = _a.sent();
-                    html = '<script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html;
+                    html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html;
                     return [2 /*return*/, html];
             }
         });
