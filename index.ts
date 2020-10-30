@@ -178,7 +178,7 @@ hexo.extend.renderer.register('github', 'html', async function (data, options) {
     }, options)
 
     let html = await htmlPromise
-    html = '<script src="http://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
+    html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
     return html
 })
 
