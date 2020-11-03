@@ -172,7 +172,9 @@ function getMarkdownWithRepo(repo) {
     // image
     if (repo.images) {
         repo.images.forEach(function (imageURL) {
-            markdown += "<p><img data-src=\"" + imageURL + "\" class=\"lazyload\"></p>\n\n";
+            // image lazy load
+            // markdown += `<p><img data-src="${imageURL}" class="lazyload"></p>\n\n`
+            markdown += "![](" + imageURL + ")";
         });
     }
     return markdown;
@@ -209,10 +211,14 @@ hexo.extend.renderer.register('github', 'html', function (data, options) {
                         text: markdown,
                         path: data.path
                     }, options);
-                    return [4 /*yield*/, htmlPromise];
+                    return [4 /*yield*/, htmlPromise
+                        // image lazy load
+                        // html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
+                    ];
                 case 2:
                     html = _a.sent();
-                    html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html;
+                    // image lazy load
+                    // html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
                     return [2 /*return*/, html];
             }
         });

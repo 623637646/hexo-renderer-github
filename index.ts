@@ -142,7 +142,9 @@ function getMarkdownWithRepo(repo: Repo) {
     // image
     if (repo.images) {
         repo.images.forEach(imageURL => {
-            markdown += `<p><img data-src="${imageURL}" class="lazyload"></p>\n\n`
+            // image lazy load
+            // markdown += `<p><img data-src="${imageURL}" class="lazyload"></p>\n\n`
+            markdown += `![](${imageURL})`
         });
     }
     return markdown
@@ -178,7 +180,8 @@ hexo.extend.renderer.register('github', 'html', async function (data, options) {
     }, options)
 
     let html = await htmlPromise
-    html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
+    // image lazy load
+    // html = '<script src="https://afarkas.github.io/lazysizes/lazysizes.min.js" async=""></script>' + html
     return html
 })
 
