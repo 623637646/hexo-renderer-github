@@ -68,9 +68,7 @@ async function doCrawler(URL: string) {
                                 URL = encodeURI(URL)
                             }
                             return URL
-                        }).get().filter(function (URL: string) {
-                            return !URL.startsWith('https://camo.githubusercontent.com')
-                        })
+                        }).get()
                     }
                     if (!repo.name || !repo.starsString) {
                         reject(new Error(`[hexo-renderer-github] Repo from ${URL} is wrong: ${JSON.stringify(repo)}`))
