@@ -1,6 +1,6 @@
 {
   "name": "hexo-renderer-github-repos",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Hexo renderer for .github files.",
   "main": "out/index.js",
   "scripts": {
